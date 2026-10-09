@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - ONG Esperança</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">ONG Esperança</a>
+
+    <button class="menu-toggle" onclick="abrirMenu()">☰</button>
+
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="section">
+
+    <span class="badge">Nossos projetos</span>
+
+    <h1>Conheça nossas ações</h1>
+
+    <p>
+        Conheça alguns dos projetos realizados pela ONG e veja
+        como você pode participar.
+    </p>
+
+    <div class="cards">
+
+        <article class="card" id="doacao">
+
+            <span class="badge">Ativo</span>
+
+            <h2>Campanha de doação</h2>
+
+            <p>
+                Arrecadamos alimentos, roupas e produtos básicos
+                para famílias que precisam de apoio.
+            </p>
+
+            <button class="btn" onclick="mostrarToast()">
+                Quero ajudar
+            </button>
+
+        </article>
+
+
+        <article class="card" id="voluntariado">
+
+            <span class="badge">Voluntariado</span>
+
+            <h2>Seja voluntário</h2>
+
+            <p>
+                Participe das nossas ações e ajude diretamente
+                nos projetos da organização.
+            </p>
+
+            <a href="contato.html" class="btn">
+                Quero participar
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <span class="badge">Educação</span>
+
+            <h2>Projeto Educação</h2>
+
+            <p>
+                Ações voltadas para incentivar o aprendizado
+                e ampliar oportunidades.
+            </p>
+
+            <button class="btn" onclick="abrirModal()">
+                Saiba mais
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<div class="toast" id="toast">
+    Ação realizada com sucesso!
+</div>
+
+
+<div class="modal" id="modal">
+
+    <div class="modal-conteudo">
+
+        <button class="fechar" onclick="fecharModal()">×</button>
+
+        <h2>Projeto Educação</h2>
+
+        <p>
+            Nosso projeto busca incentivar crianças e jovens
+            através de atividades educativas e sociais.
+        </p>
+
+        <button class="btn" onclick="fecharModal()">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p>© 2026 ONG Esperança</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

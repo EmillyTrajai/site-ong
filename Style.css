@@ -1,0 +1,666 @@
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+:root {
+
+    --verde: #2E7D32;
+    --verde-escuro: #1B5E20;
+    --verde-claro: #66BB6A;
+
+    --amarelo: #FFB300;
+    --amarelo-claro: #FFE082;
+
+    --branco: #FFFFFF;
+    --cinza-claro: #F5F5F5;
+    --cinza: #616161;
+    --preto: #212121;
+
+    --erro: #C62828;
+    --sucesso: #2E7D32;
+
+    --fonte-h1: 2rem;
+    --fonte-h2: 1.6rem;
+    --fonte-h3: 1.3rem;
+    --fonte-texto: 1rem;
+    --fonte-pequena: 0.875rem;
+
+    --espaco-1: 8px;
+    --espaco-2: 16px;
+    --espaco-3: 24px;
+    --espaco-4: 32px;
+    --espaco-5: 40px;
+    --espaco-6: 48px;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--preto);
+    background: var(--cinza-claro);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER + FLEXBOX
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 6%;
+
+    background: var(--branco);
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--verde-escuro);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-menu a {
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--verde);
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 180px;
+
+    background: var(--branco);
+
+    padding: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px;
+}
+
+
+/* =========================
+   MENU HAMBÚRGUER
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.hero {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 32px;
+
+    align-items: center;
+
+    padding: 80px 6%;
+}
+
+.hero > div:first-child {
+    grid-column: span 7;
+}
+
+.hero-card {
+    grid-column: span 5;
+
+    background: var(--verde);
+
+    color: var(--branco);
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 60px 6%;
+}
+
+.section h1 {
+    font-size: var(--fonte-h1);
+
+    margin-bottom: 16px;
+}
+
+.section > p {
+    margin-bottom: 32px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 24px;
+
+    margin-top: 32px;
+}
+
+.card {
+    grid-column: span 4;
+
+    background: var(--branco);
+
+    padding: 28px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: var(--amarelo-claro);
+
+    color: var(--preto);
+
+    font-size: var(--fonte-pequena);
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 12px 20px;
+
+    border: 2px solid var(--verde);
+
+    border-radius: 8px;
+
+    background: var(--verde);
+
+    color: var(--branco);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: var(--verde-escuro);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+    outline: 3px solid var(--amarelo);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    background: #BDBDBD;
+
+    border-color: #BDBDBD;
+
+    cursor: not-allowed;
+
+    opacity: 0.6;
+}
+
+.btn-secundario {
+    background: transparent;
+
+    color: var(--verde);
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+    max-width: 600px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    background: var(--branco);
+
+    padding: 32px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+input,
+textarea {
+    padding: 12px;
+
+    border: 2px solid #BDBDBD;
+
+    border-radius: 6px;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: var(--verde);
+
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+input:valid,
+textarea:valid {
+    border-color: var(--sucesso);
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--erro);
+}
+
+
+/* =========================
+   OUTROS BLOCOS
+========================= */
+
+.info-box {
+    background: var(--branco);
+
+    padding: 28px;
+
+    margin-top: 24px;
+
+    border-left: 5px solid var(--verde);
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    background: var(--verde-escuro);
+
+    color: var(--branco);
+
+    padding: 16px 24px;
+
+    border-radius: 8px;
+
+    display: none;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    z-index: 100;
+}
+
+.toast.mostrar {
+    display: block;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 200;
+}
+
+.modal.mostrar {
+    display: flex;
+}
+
+.modal-conteudo {
+    background: var(--branco);
+
+    max-width: 500px;
+
+    padding: 32px;
+
+    border-radius: 12px;
+
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+
+    top: 10px;
+
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--verde-escuro);
+
+    color: var(--branco);
+
+    text-align: center;
+
+    padding: 24px;
+
+    margin-top: 40px;
+}
+
+
+/* =========================
+   BREAKPOINT 1 - 1200px
+========================= */
+
+@media (max-width: 1200px) {
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+}
+
+
+/* =========================
+   BREAKPOINT 2 - 992px
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero > div:first-child {
+        grid-column: span 8;
+    }
+
+    .hero-card {
+        grid-column: span 4;
+    }
+
+    .card {
+        grid-column: span 6;
+    }
+
+}
+
+
+/* =========================
+   BREAKPOINT 3 - 768px
+========================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--branco);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+
+        gap: 16px;
+    }
+
+    .nav-menu.ativo {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: static;
+
+        box-shadow: none;
+
+        padding-left: 15px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .hero > div:first-child,
+    .hero-card {
+        grid-column: span 12;
+    }
+
+}
+
+
+/* =========================
+   BREAKPOINT 4 - 576px
+========================= */
+
+@media (max-width: 576px) {
+
+    .hero {
+        grid-template-columns: repeat(6, 1fr);
+
+        padding: 45px 5%;
+    }
+
+    .hero > div:first-child,
+    .hero-card {
+        grid-column: span 6;
+    }
+
+    .cards {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .card {
+        grid-column: span 6;
+    }
+
+    .botoes {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================
+   BREAKPOINT 5 - 480px
+========================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .section h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-card {
+        padding: 25px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+}
